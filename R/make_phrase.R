@@ -13,6 +13,7 @@
 #' @import glue
 #' @import dplyr
 #' @import purrr
+#' @import english
 #'
 #' @export
 
@@ -20,10 +21,14 @@
 
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
-  verb <- str_replace_na(verb, "")
-
-  #????
-
+  if (num == 1) {
+    phrase <- str_c("and a", adjective, item, verb, location, sep = " ")
+  }
+  else {
+    phrase <- str_c(as.english(num), adjective, pluralize_gift(item), verb, location, sep = " ")
+  }
+  phrase <- gsub("\\s+", " ", str_trim(phrase))
+  return(phrase)
 
 }
 

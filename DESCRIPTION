@@ -15,7 +15,8 @@ Imports:
     glue,
     stringr,
     magrittr,
-    purrr
+    purrr,
+    english
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Suggests: 
