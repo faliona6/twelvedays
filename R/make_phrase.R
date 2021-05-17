@@ -22,7 +22,7 @@
 make_phrase <- function(num, num_word, item, verb, adjective, location){
 
   if (num == 1) {
-    phrase <- str_c("and a", adjective, item, verb, location, sep = " ")
+    phrase <- str_c("and an", adjective, item, verb, location, sep = " ")
   }
   else {
     phrase <- str_c(as.english(num), adjective, pluralize_gift(item), verb, location, sep = " ")
